@@ -63,7 +63,11 @@
 /* DBCS code ranges and SBCS extend char conversion table */
 /*--------------------------------------------------------*/
 
-#if _CODE_PAGE == 932	/* Japanese Shift-JIS */
+#if _CODE_PAGE == 0	    /* ASCII 7-Bit */
+#define _DF1S	0x00
+#define _DF1E	0x00
+
+#elif _CODE_PAGE == 932	/* Japanese Shift-JIS */
 #define _DF1S	0x81	/* DBC 1st byte range 1 start */
 #define _DF1E	0x9F	/* DBC 1st byte range 1 end */
 #define _DF2S	0xE0	/* DBC 1st byte range 2 start */
